@@ -169,4 +169,27 @@ fn main() {
 ```n```번째 피보나치 수를 계산하는 함수 ```fib(n)```을 작성하세요.
 이 함수는 언제 panic(패닉)을 일으키게 될까요?
 
+# if 표현식
+
+다른 언어의 if문과 똑같이 if 표현식을 사용합니다.
+```rust
+fn main() {
+    let x = 10;
+    if x == 0 {
+        println!("Zero!");
+    } else if x < 100 {
+        println!("큰");
+    } else {
+        println!("거대한");
+    }
+}
+```
+게다가 if는 표현식으로 사용할 수도 있습니다. 아래 코드는 위와 동일합니다.
+```rust
+fn main() {
+    let x = 10;
+    let size = if x < 20 { "작은" } else { "대형" };
+    println!("숫자 크기: {}", size);
+}
+```
 
